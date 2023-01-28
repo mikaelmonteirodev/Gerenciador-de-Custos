@@ -8,4 +8,4 @@ Esta aplicação funciona da seguinte maneira:
 - A qualquer momento o usuário poderá clicar no botão Extrato para emitir uma listagem de seus gastos e quanto possui em carteira;
 - E caso queira reiniciar o sistema basta clicar no botão recomeçar.
 
-### Este sistema foi criado como exrcício em sala de aula com a mentoria do profesor Abraão Alves na Digital College | Fortaleza | CE | BR
+#### Este sistema foi criado como exercício em sala de aula com a mentoria do profesor Abraão Alves na Digital College | Fortaleza | CE | BR
