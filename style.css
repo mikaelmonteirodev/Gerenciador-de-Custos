@@ -1,5 +1,5 @@
 img {
-    width: 50px;
+    width: 80px;
 }
 
 main{    
@@ -33,7 +33,7 @@ picture img {
 }
   
 .wallet-button {
-  background-color: #111827;
+  background-color: #191970;
   border: 1px solid transparent;
   border-radius: .75rem;
   box-sizing: border-box;
@@ -82,16 +82,17 @@ ul.flex {
 }
 
 button{
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 footer{
+  padding-top: 30px;
   display: flex; 
   justify-content: space-evenly;
 }
 
 footer button{
-background-color: #111827;
+background-color: #191970;
 border: 1px solid transparent;
 border-radius: .75rem;
 box-sizing: border-box;
