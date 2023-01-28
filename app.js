@@ -35,10 +35,10 @@ onEvent("comida","click", () =>{
     carteira -= comida; // reduzir o valor que foi declarado na variável
     alert("Você gastou R$" + comida + " com comida!"); // informar ao usuário que ouve uma transação
     extrato += "R$" + comida + " gastos com comida \n"; // armazenar em extrato o que está sendo gasto
-    document.querySelector("#wallet").innerHTML = carteira; // 
-    if (carteira < economia){
+    document.querySelector("#wallet").innerHTML = carteira; // apresentar o valor restante em cateria deduzido do gasto
+    if (carteira <= economia){ // se o valor em carteira for inferior que a economia pretendida ele vai avisar com a msg e mudar o fundo da tela para vermelho
         walletColorRed();
-        alert("Ei, você gastou mais do que deveria!");
+        alert("Você atingiu seu limite de gastos!");
     }
 });
 onEvent("brinquedo","click", () => {
@@ -48,7 +48,7 @@ onEvent("brinquedo","click", () => {
     document.querySelector("#wallet").innerHTML = carteira;
     if (carteira < economia){
         walletColorRed();
-        alert("Ei, você gastou mais do que deveria!");
+        alert("Você atingiu seu limite de gastos");
     }
 });
 onEvent("circo","click", () => {
@@ -58,21 +58,18 @@ onEvent("circo","click", () => {
     document.querySelector("#wallet").innerHTML = carteira;
     if (carteira < economia){
         walletColorRed();
-        alert("Ei, você gastou mais do que deveria!");
+        alert("Você atingiu seu limite de gastos");
     }
 });
 
 
-onEvent("go-extrato", "click", () => {
-    if (carteira < economia){
-        alert(extrato + "\n" + "Seu saldo atual é de R$" + carteira + "."); 
-    }   
+// quando clicar no botão EXTRATO ele vai abrir uma caixa de alerta listando os gastos e informando quando tem de saldo e qual o valor definido como economia.
+onEvent("go-extrato", "click", () => {    
+        alert(extrato + "\n" + "Seu saldo atual é de R$" + carteira + ".\n" + "Sua meta de gastos era de R$" + economia); 
 })
 
 
+// criar a variavel que altera o background do BODY para vermelho
 const walletColorRed = () => {
    document.querySelector("body").style.backgroundColor ="#FF6347";   
-}
-
-// cada gasto deve diminuir o valor inicial da carteira 
-// quando o valor da carteira chega menor ou igual ao valor dito pelo usuário a tela ficar vermelha
+}2
