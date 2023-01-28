@@ -29,7 +29,7 @@ picture {
 }
 
 picture img {
-  width: 100px;  
+  width: 150px;  
 }
   
 .wallet-button {
@@ -78,7 +78,8 @@ ul.flex {
 }
 
 button{
-  cursor: pointer;  
+  cursor: pointer;
+  border: 0;
 }
 
 footer{
