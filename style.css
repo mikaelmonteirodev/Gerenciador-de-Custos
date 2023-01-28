@@ -7,6 +7,11 @@ img {
     max-height: 800;
     max-width: 360px;
   }
+
+h1{
+  text-align: center; 
+}
+
   picture {
     display: flex;
     justify-content: space-evenly;

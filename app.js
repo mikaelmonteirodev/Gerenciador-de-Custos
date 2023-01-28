@@ -1,26 +1,37 @@
+// importar funções da livraria  do code.org para serem usadas na aplicação
 import {
     onEvent, 
     showElement, 
     setScreen} from './lib/code.org.js';
 
-let carteira = 200; 
-let extrato = " "; 
-const comida = 20; 
-const circo = 15; 
-const brinquedo = 13; 
+// definir aqui as variáveis que serão usadas
 
-// valor da carteira deve ser 200 reais 
+
+// perguntar ao usuário quanto ele possui na carteira
+let carteira = prompt("QUANTO VOCÊ POSSUI NA CARTEIRA?"); 
+
+
 // perguntar ao usuario quanto ele quer economizar 
-let economia = prompt ("Quanto você gostaria de economizar?");
+let economia = prompt("QUANTO VOCÊ QUER ECONOMIZAR?");
 
 
+// a variavel extrato irá emitir uma listagem do que  foi gasto
+// ela deve iniciar vazia para elecar os gastos executaods
+let extrato = " ";
 
-// gerenciar os gastos atraves dos cliques dos tres botoes 
 
+// definir o valor que cada item custa
+const comida = 18.00; 
+const circo = 15.00; 
+const brinquedo = 13.00; 
+
+
+// cada vez que o botão for clicado ele deve reduzir o valor que foi declarado na variável
 onEvent("comida","click", () =>{
-    extrato += "Saldo Atual: " + carteira + " reais. \n"; 
     carteira -= comida; 
-    extrato += comida + " reais debitados na sua conta \n"; 
+    alert("Você gastou R$" + comida + " com comida!");
+    // extrato += "Saldo Atual: R$" + carteira + " reais. \n"; 
+    extrato += "R$" + comida + " gastos com comida \n"; 
     document.querySelector("#wallet").innerHTML = carteira;
     if(carteira < 0){
         walletColor();
