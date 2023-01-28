@@ -4,7 +4,7 @@ import {
     showElement, 
     setScreen} from './lib/code.org.js';
 
-// definir aqui as variáveis que serão usadas
+// definir abaixo quais as variáveis que serão usadas
 
 
 // perguntar ao usuário quanto ele possui na carteira
