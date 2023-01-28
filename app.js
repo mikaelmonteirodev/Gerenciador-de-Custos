@@ -71,5 +71,5 @@ onEvent("go-extrato", "click", () => {
 
 // criar a variavel que altera o background do BODY para vermelho
 const walletColorRed = () => {
-   document.querySelector("body").style.backgroundColor ="#FF6347";   
+   document.querySelector("body").style.background= "linear-gradient(to left, #660000, #990000, #ff0000)";   
 }
