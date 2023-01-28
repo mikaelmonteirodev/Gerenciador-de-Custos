@@ -15,6 +15,10 @@ let carteira = prompt("QUANTO VOCÊ POSSUI NA CARTEIRA?");
 let economia = prompt("QUANTO VOCÊ QUER ECONOMIZAR?");
 
 
+// definir o valor da diferença entre o que tem na carteira e o limite de gastos
+let diferenca = carteira - economia;
+
+
 // a variavel extrato irá emitir uma listagem do que  foi gasto
 // ela deve iniciar vazia para elecar os gastos executaods
 let extrato = " ";
@@ -26,50 +30,82 @@ const circo = 15.00;
 const brinquedo = 13.00; 
 
 
-// cada vez que o botão for clicado ele deve reduzir o valor que foi declarado na variável
+// incluir o valor informado para gastos na carteira
+document.querySelector("#wallet").innerHTML = carteira;
+
+// cada vez que o botão for clicado ele deve: 
 onEvent("comida","click", () =>{
-    carteira -= comida; 
-    alert("Você gastou R$" + comida + " com comida!");
-    // extrato += "Saldo Atual: R$" + carteira + " reais. \n"; 
-    extrato += "R$" + comida + " gastos com comida \n"; 
+    carteira -= comida; // reduzir o valor que foi declarado na variável
+    alert("Você gastou R$" + comida + " com comida!"); // informar ao usuário que ouve uma transação
+    extrato += "R$" + comida + " gastos com comida \n"; // armazenar em extrato
     document.querySelector("#wallet").innerHTML = carteira;
-    if(carteira < 0){
-        walletColor();
+    if (diferenca == 0){
+        walletColorYellow();
+        alert("Ei, vai devagar!\nVocê chegou no seu limite!");
+    } else if (diferenca < 0){
+        walletColorRed();
+        alert("Ei, você gastou mais do que deveria!");
+    } else{
+        walletColorGreen();
+        alert("Você ainda tem um dinheirinho para gastar!");
     }
 });
 onEvent("brinquedo","click", () => {
-    extrato += "Saldo Atual: " + carteira + " reais. \n"; 
     carteira -= brinquedo;
-    extrato += brinquedo + " reais debitados na sua conta \n"; 
+    alert("Você gastou R$" + brinquedo + " com brinquedo!");    
+    extrato += "R$" + brinquedo + " gastos com brinquedo \n"; 
     document.querySelector("#wallet").innerHTML = carteira;
-    if(carteira < 0){
-        walletColor();
+    if (diferenca == 0){
+        walletColorYellow();
+        alert("Ei, vai devagar!\nVocê chegou no seu limite!");
+    } else if (diferenca < 0){
+        walletColorRed();
+        alert("Ei, você gastou mais do que deveria!");
+    } else{
+        walletColorGreen();
+        alert("Você ainda tem um dinheirinho para gastar!");
     }
-
-})
+});
 onEvent("circo","click", () => {
-    extrato += "Saldo Atual: " + carteira + " reais. \n";
     carteira -= circo; 
-    extrato += brinquedo + " reais debitados na sua conta \n"; 
+    alert("Você gastou R$" + circo + " com circo!");    
+    extrato += "R$" + brinquedo + " gastos com circo \n"; 
     document.querySelector("#wallet").innerHTML = carteira;
-    if(carteira < 0){
-        walletColor();
+    if (diferenca == 0){
+        walletColorYellow();
+        alert("Ei, vai devagar!\nVocê chegou no seu limite!");
+    } else if (diferenca < 0){
+        walletColorRed();
+        alert("Ei, você gastou mais do que deveria!");
+    } else{
+        walletColorGreen();
+        alert("Você ainda tem um dinheirinho para gastar!");
     }
-})
+});
+
 
 onEvent("go-extrato", "click", () => {
-    alert(extrato);
+    if(diferenca < 0){
+        alert(extrato + "\nSeu saldo atual é de R$" + carteira + "." + "\nVocê gastou R$" + diferenca + " além do que deveria!");    
+    } else if(diferenca = 0){
+        alert(extrato + "\nSeu saldo atual é de R$" + carteira + "." + "\nVocê já gastou o que definiu para gastar!");
+    } else{
+        alert(extrato + "\nSeu saldo atual é de R$" + carteira + "." + "\nVocê ainda pode gastar mais um dinheirinho!");
+    }
 })
 
-onEvent("reset", "click", () => {
-    carteira = 200;
-    extrato = ""; 
-    document.querySelector("#wallet").innerHTML = carteira;
-})
 
-const walletColor = () => {
-   document.querySelector("#wallet-button").style.backgroundCollor = "#FA3E4C";
+const walletColorYellow = () => {
+    document.querySelector("body").style.backgroundColor ="#FFFFE0";   
+ }
+
+const walletColorRed = () => {
+   document.querySelector("body").style.backgroundColor ="#FF6347";   
 }
+
+const walletColorGreen = () => {
+    document.querySelector("body").style.backgroundColor ="#98FB98";   
+ }
 
 
 
