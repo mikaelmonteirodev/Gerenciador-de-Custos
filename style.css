@@ -1,0 +1,129 @@
+img {
+    width: 50px;
+  }
+  main{
+    
+    margin: 8vh auto; 
+    max-height: 800;
+    max-width: 360px;
+  }
+  picture {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    margin: 10px;
+  }
+  
+  picture img {
+    width: 100px;
+    
+  }
+  
+.wallet-button {
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  height: 50px;
+}
+
+.wallet-button:hover {
+  background-color: #374151;
+}
+
+.wallet-button:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+  
+  
+  ul {
+    list-style:none;
+    padding: 0;
+  }
+  
+  section :is(button, img) {
+    border-radius: 100%;
+  }
+  
+  
+  .flex {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .flex li {
+    padding: 10px;
+    
+  }
+ 
+  footer{
+    display: flex; 
+    justify-content: space-evenly;
+
+  }
+
+  footer button{
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  height: 50px;
+}
+
+footer button:hover {
+  background-color: #374151;
+}
+
+footer button:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .wallet-button{
+    padding: .75rem 1.5rem;
+  }
+  footer button{
+    padding: .75rem 1.5rem;
+  }
+}
