@@ -38,7 +38,7 @@ onEvent("comida","click", () =>{
     document.querySelector("#wallet").innerHTML = carteira; // apresentar o valor restante em cateria deduzido do gasto
     if (carteira <= economia){ // se o valor em carteira for inferior que a economia pretendida ele vai avisar com a msg e mudar o fundo da tela para vermelho
         walletColorRed();
-        alert("Você atingiu seu limite de gastos!");
+        alert("ATENÇAO! Você atingiu seu limite de gastos");
     }
 });
 onEvent("brinquedo","click", () => {
@@ -48,7 +48,7 @@ onEvent("brinquedo","click", () => {
     document.querySelector("#wallet").innerHTML = carteira;
     if (carteira < economia){
         walletColorRed();
-        alert("Você atingiu seu limite de gastos");
+        alert("ATENÇAO! Você atingiu seu limite de gastos");
     }
 });
 onEvent("circo","click", () => {
@@ -58,7 +58,7 @@ onEvent("circo","click", () => {
     document.querySelector("#wallet").innerHTML = carteira;
     if (carteira < economia){
         walletColorRed();
-        alert("Você atingiu seu limite de gastos");
+        alert("ATENÇAO! Você atingiu seu limite de gastos");
     }
 });
 
