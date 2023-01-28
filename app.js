@@ -65,19 +65,10 @@ onEvent("circo","click", () => {
 
 onEvent("go-extrato", "click", () => {
     if (carteira < economia){
-        alert(extrato + "\nSeu saldo atual é de R$" + (carteira-economia) + "." + "\nVocê gastou além do que deveria!"); 
+        alert(extrato + "\n" + "Seu saldo atual é de R$" + carteira + "."); 
     }   
-    // } else if (diferenca == 0){
-    //     alert(extrato + "\nSeu saldo atual é de R$" + carteira + "." + "\nVocê já gastou o que definiu para gastar!");
-    // } else {
-    //     alert(extrato + "\nSeu saldo atual é de R$" + carteira + "." + "\nVocê ainda pode gastar mais um dinheirinho!");
-    // }
 })
 
-
-const walletColorYellow = () => {
-    document.querySelector("body").style.backgroundColor ="#FFFFE0";   
- }
 
 const walletColorRed = () => {
    document.querySelector("body").style.backgroundColor ="#FF6347";   
