@@ -64,11 +64,11 @@ const walletColorRed = () => {
 }
 
 
-// função criada automaticamente pelo atalho da lampada e escolhendo a opção "extract function in mode escope"
+// função criada automaticamente pelo atalho da lampada e escolhendo a opção "extract function in mode escope" (Ele pega as linhas de código repetidas e cria uma nova função)
 function atualizaCarteiraEalertaUsuario() {
     document.querySelector("#wallet").innerHTML = carteira; // apresentar o valor restante em cateria deduzido do gasto
     if (carteira <= ECONOMIA) { // se o valor em carteira for inferior que a economia pretendida ele vai avisar com a msg e mudar o fundo da tela para vermelho
-        walletColorRed();
-        alert("ATENÇAO! Você atingiu seu limite de gastos");
+        walletColorRed(); // altera a cor do fundo para vermelho, quando o valor atinge o limite de gastos
+        alert("ATENÇAO! Você atingiu seu limite de gastos"); // mostra alerta de que o gasto foi atingido
     }
 }
