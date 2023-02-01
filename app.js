@@ -1,8 +1,7 @@
 // importar funções da livraria  do code.org para serem usadas na aplicação
 import {
-    onEvent, 
-    showElement, 
-    setScreen} from './lib/code.org.js';
+    onEvent 
+   } from './lib/code.org.js';
 
 // definir abaixo quais as variáveis que serão usadas
 
