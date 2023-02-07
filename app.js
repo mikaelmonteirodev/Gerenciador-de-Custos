@@ -21,9 +21,11 @@ let extrato = " ";
 
 // definir o valor que cada item custa
 const COMIDA = 18.00; 
-const CIRCO = 15.00; 
 const BRINQUEDO = 13.00; 
+const CIRCO = 15.00; 
 
+// criar variavel de extrato que será alimentada conforme os gastos forem acontecendo
+let extractList = []
 
 // incluir o valor informado para gastos na carteira
 document.querySelector("#wallet").innerHTML = carteira;
@@ -35,12 +37,24 @@ onEvent("comida","click", () =>{ // Arrow function - mesmo que usar "function() 
     alert("Você gastou R$" + COMIDA + " com comida!"); // informar ao usuário que ouve uma transação
     extrato += "R$" + COMIDA + " gastos com comida \n"; // armazenar em extrato o que está sendo gasto
     atualizaCarteiraEalertaUsuario();
+    let transaction = { // função que cria a lista
+        nome: "Comida",
+        valor: 18.00,
+        data: new Date()
+    };
+    extractList.push(transaction);
 });
 onEvent("brinquedo","click", () => {
     carteira -= BRINQUEDO;
     alert("Você gastou R$" + BRINQUEDO + " com brinquedo!");    
     extrato += "R$" + BRINQUEDO + " gastos com brinquedo \n"; 
     atualizaCarteiraEalertaUsuario();
+    let transaction = {
+        nome: "Brinquedo",
+        valor: 13.00,
+        data: new Date()
+    };
+    extractList.push(transaction);
     
 });
 onEvent("circo","click", () => {
@@ -48,8 +62,15 @@ onEvent("circo","click", () => {
     alert("Você gastou R$" + CIRCO + " com circo!");    
     extrato += "R$" + CIRCO + " gastos com circo \n";
     atualizaCarteiraEalertaUsuario();
+    let transaction = {
+        nome: "Circo",
+        valor: 15.00,
+        data: new Date()
+    };
+    extractList.push(transaction);    
 });
 
+console.log(extractList);
 
 // quando clicar no botão EXTRATO ele vai abrir uma caixa de alerta listando os gastos e informando quando tem de saldo e qual o valor definido como economia.
 onEvent("go-extrato", "click", () => {    
