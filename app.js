@@ -18,9 +18,9 @@ let carteira = prompt("QUANTO VOCÊ POSSUI NA CARTEIRA?");
 const ECONOMIA = prompt("QUANTO VOCÊ QUER ECONOMIZAR?");
 
 
-// a variavel extrato irá emitir uma listagem do que  foi gasto
-// ela deve iniciar vazia para elecar os gastos executaods
-let extrato = " ";
+// a variavel extrato irá emitir uma listagem do que foi gasto
+// ela deve iniciar vazia para elencar os gastos executaods
+let extrato = "";
 
 
 // definir o valor que cada item custa
@@ -58,8 +58,6 @@ onEvent("circo", "click", () => {
     atualizaCarteiraEalertaUsuario();
     atualizaListaCirco();
 });
-
-console.log(extractList);
 
 // quando clicar no botão EXTRATO ele vai abrir uma caixa de alerta listando os gastos e informando quando tem de saldo e qual o valor definido como economia.
 onEvent("go-extrato", "click", () => {
