@@ -17,6 +17,7 @@ export function imprimeExtrato(extractList) {
       Tipo: ${item.nome}<br>
       Valor: ${item.valor}<br>
       Data: ${item.data}<br>
+      <br>
       `;
     });
     return lista;
