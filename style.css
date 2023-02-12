@@ -126,3 +126,11 @@ footer button:hover {
     padding: .75rem 1.5rem;
   }
 }
+
+#extrato-footer{
+  margin-top: 50px;
+  padding: 20px;
+  padding-top: 30px;
+  background-color: #eee;
+  border-radius: 20px;
+}
