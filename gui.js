@@ -14,9 +14,9 @@ export function imprimeExtrato(extractList) {
     let lista = "";
     extractList.forEach((item) => {
       lista += `
-      tipo: ${item.nome}<br>
-      valor: ${item.valor}<br>
-      data: ${item.data}<br>
+      Tipo: ${item.nome}<br>
+      Valor: ${item.valor}<br>
+      Data: ${item.data}<br>
       `;
     });
     return lista;
