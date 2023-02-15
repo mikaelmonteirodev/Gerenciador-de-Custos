@@ -127,7 +127,8 @@ footer button:hover {
   }
 }
 
-#extrato-footer{
+#lista-de-gastos{
+  display: none;
   margin-top: 50px;
   padding: 20px;
   padding-top: 30px;
