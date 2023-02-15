@@ -64,6 +64,8 @@ onEvent("go-extrato", "click", () => {
     // alert(extrato + "\n" + "Seu saldo atual é de R$" + carteira + ".\n" + "Sua meta de gastos era de R$" + ECONOMIA); 
     let listHTML = imprimeExtrato(extractList);
     setContent(listHTML, "lista-de-gastos");
+    var div = document.getElementById("lista-de-gastos");
+    div.style.display = "block";
 })
 
 
