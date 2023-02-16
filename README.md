@@ -1,4 +1,4 @@
-# Gerenciador de Custos
+# Gerenciador de Custos (Pocket)
 
 Esta aplicação funciona da seguinte maneira:
 - Ao iniciar a aplicação o sistema irá pedir que o usuário informe o valor que possui em carteira para gastar;
